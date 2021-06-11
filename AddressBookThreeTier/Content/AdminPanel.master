@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminPanel.master.cs" Inherits="Content_AdminPanel" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/4.5.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">AddressBook3Tier</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item ml-5">
+                        <asp:HyperLink ID="hlCity" runat="server" NavigateUrl="~/AdminPanel/City/CityList.aspx" Text="City"></asp:HyperLink>
+                    </li>
+                    <li class="nav-item ml-5">
+                        <asp:HyperLink ID="hlState" runat="server" NavigateUrl="~/AdminPanel/State/StateList.aspx" Text="State"></asp:HyperLink>
+                    </li>
+                    <li class="nav-item ml-5">
+                        <asp:HyperLink ID="hlCountry" runat="server" NavigateUrl="~/AdminPanel/Country/CountryList.aspx" Text="Country"></asp:HyperLink>
+                    </li>
+                    <li class="nav-item ml-5">
+                        <asp:HyperLink ID="hlContact" runat="server" NavigateUrl="~/AdminPanel/Contact/ContactList.aspx" Text="Contact"></asp:HyperLink>
+                    </li>
+                    <li class="nav-item ml-5">
+                        <asp:HyperLink ID="hlContactCategory" runat="server" NavigateUrl="~/AdminPanel/ContactCategory/ContactCategoryList.aspx" Text="ContactCategory"></asp:HyperLink>
+                    </li>
+                    <li class="nav-item ml-5">
+                        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/AdminPanel/BloodGroup/BloodGroupList.aspx" Text="BloodGroup"></asp:HyperLink>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <asp:ContentPlaceHolder ID="cphPageHeader" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <asp:ContentPlaceHolder ID="cphPageContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
